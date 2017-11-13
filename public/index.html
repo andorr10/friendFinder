@@ -148,7 +148,7 @@
 		<hr>
 	    <footer class="footer">
 	      <div class="container">
-		        <p><a href="/api/characters">Characters List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+		        <p><a href="/api/characters">Characters List</a> | <a href="/api/friends">Friends List</a></p>
 	      </div>
 	    </footer>
 
@@ -227,6 +227,8 @@
 				console.log(userData);
 				$.post("/api/friends", userData, function(data){
 
+				}).done(function(data){
+					alert("added you to the friends list");
 				});
 				// .done(function(data) {
 				// 	console.log(data);
